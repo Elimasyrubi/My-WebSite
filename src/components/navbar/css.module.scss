@@ -1,3 +1,30 @@
-.title{
-    color: #fff;
+@import "../../general";
+.container {
+  max-width: 95%;
+  margin: 0 auto;
+	position: relative;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+		padding: 1rem 0;
+    .name {
+      color: $light;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    .menuHamburger {
+      width: 33px;
+      height: 33px;
+      border-radius: 0.2rem;
+			/* Tablet */
+			@media (min-width: 768px) { 
+				display: none;
+			}
+      i {
+        font-size: 1.3rem;
+      }
+    }
+  }
 }
