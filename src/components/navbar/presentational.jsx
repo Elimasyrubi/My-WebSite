@@ -27,7 +27,7 @@ const NavbarView = ({
 				<a
 
 					className={
-						`${fixed && themeMode === 'dark' ? `${css.btnFixed} ${css.btnCvDark}` : null}  
+					`${fixed && themeMode === 'dark' ? `${css.btnFixed} ${css.btnCvDark}` : null}  
 					${fixed && themeMode === 'light' ? `${css.btnFixed} ${css.btnCvLight}` : null}  
 					${css.bntCv}
 					`
@@ -47,7 +47,6 @@ const NavbarView = ({
 			</div>
 		)
 	}
-	console.log(fixed)
 	return (
 		<div
 			className={`

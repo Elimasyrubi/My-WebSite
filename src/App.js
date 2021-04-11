@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import Routes from './routes/index';
 import { useSelector , useDispatch} from 'react-redux';
-import {useEffect, useState} from 'react';
+import {useEffect} from 'react';
 import { setScrool } from './redux/App/AppActions'
 
 function App() {

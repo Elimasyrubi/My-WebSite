@@ -2,3 +2,16 @@
 $light : #F2F2FC;
 $dark: #1A1C2C;
 $color03: #00B2FF;
+
+//Fuentes
+$h2: 1.7rem;
+
+//Mixing
+@mixin  mobileContainer {
+    max-width: 95%;
+    margin: 0 auto;
+    /* Desktop */
+    @media (min-width: 1200px) { 
+        max-width: 1200px;
+    }
+}

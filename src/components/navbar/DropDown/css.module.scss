@@ -15,6 +15,7 @@
     background-color: $light ;
     border-radius: .5rem;
     position: absolute;
+    z-index: 100;
     top: 1rem;
     right: 0;
     animation: menuAnimation .2s;
