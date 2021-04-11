@@ -14,7 +14,7 @@ const DropDownView = ({ closeDropDownFn, lenguage, changeLenguageFn }) => {
                 className={css.closeButton}
                 onClick={closeDropDownFn}
                 type='button'>
-                <i class="fas fa-times"></i>
+                <i className="fas fa-times"></i>
             </button>
 
             <p className={`${css.btn} ${css.blueButton}`}>
@@ -23,7 +23,7 @@ const DropDownView = ({ closeDropDownFn, lenguage, changeLenguageFn }) => {
             </p>
 
             <a className={`${css.btn} ${css.bntWhite}`} href='#'>
-                <i class="fas fa-file-download"></i>
+                <i className="fas fa-file-download"></i>
                 {lenguage === 'es' && 'Descargar CV'}
                 {lenguage === 'en' && 'Download CV'}
             </a>

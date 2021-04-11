@@ -1,4 +1,30 @@
 @import "../../general";
+
+@keyframes fadeRight {
+  0%{
+    right: 0;
+  }
+  50%{
+    right: 50%;
+  }
+  100%{
+    left: 0;
+  }
+};
+@keyframes fadeLeft {
+  0%{
+    left: 0;
+  }
+  50%{
+    left: 50%;
+  }
+  100%{
+    right: -5px;
+  }
+};
+
+
+
 .container {
   max-width: 95%;
   margin: 0 auto;
@@ -26,5 +52,56 @@
         font-size: 1.3rem;
       }
     }
+    .label{
+      --toggle-color: #3A3E56;
+      --height: 1.5rem;
+      display: inline-block;
+      width: 45px;
+      height: 1.5rem;
+      border-radius: 2rem;
+      position: relative;
+      margin-right: 1rem;
+      &:hover{
+        cursor: pointer;
+      }
+      input{
+        opacity: 100;
+      }
+      span{
+        width: 27px;
+        height: 27px;
+        display: flex;
+        justify-content: center;
+        align-items: center ;
+        border-radius: 50%;
+        position: absolute;
+        top: -5px;
+        transition: .5s;
+        i{
+          color: #FFB800;
+        }
+      }
+      .spanDark{
+        background-color: $dark;
+        border-color: #183148;
+        animation: fadeRight .5s;
+      }
+      .spanLight{
+        background-color: $light; 
+        border: 2px solid $color03;
+       animation: fadeLeft .5s;
+       right: -5px;
+      }
+    }
+    .inputDarkmode{
+      background: #3A3E56;
+      border: 2px solid #183248;
+    }
+    .inputLightmode{
+      background: $color03;
+      border: 2px solid $color03;
+    }
+
+    
   }
 }
