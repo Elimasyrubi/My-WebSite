@@ -7,7 +7,7 @@ import spainFlag from '../../../assets/spainFlag.png'
 //styles
 import css from './css.module.scss';
 
-const DropDownView = ({ closeDropDownFn, lenguage, changeLenguageFn }) => {
+const DropDownView = ({ closeDropDownFn, lenguage, changeLenguageFn, }) => {
     return (
         <div className={css.container}>
             <button
@@ -17,10 +17,10 @@ const DropDownView = ({ closeDropDownFn, lenguage, changeLenguageFn }) => {
                 <i className="fas fa-times"></i>
             </button>
 
-            <p className={`${css.btn} ${css.blueButton}`}>
+            <a className={`${css.btn} ${css.blueButton}`}>
                 {lenguage === 'es' && 'Creemos Algo Juntos!'}
                 {lenguage === 'en' && `Let's Work Together`}
-            </p>
+            </a>
 
             <a className={`${css.btn} ${css.bntWhite}`} href='#'>
                 <i className="fas fa-file-download"></i>
