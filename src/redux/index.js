@@ -1,6 +1,7 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { createPromise } from 'redux-promise-middleware';
+import reduxInmutableStateInvariant from 'redux-immutable-state-invariant';
 
 //app reducers
 import {appReducer} from './App/AppReducer';
@@ -15,6 +16,7 @@ export const suffixes = {
   
   const middlewares = [
     thunk,
+    reduxInmutableStateInvariant(),
     createPromise({
       promiseTypeSuffixes: Object.keys(suffixes),
     }),

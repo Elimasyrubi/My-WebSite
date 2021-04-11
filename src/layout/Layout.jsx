@@ -1,9 +1,9 @@
-import Navbar from '../components/navbar/presentational';
+//import Navbar from '../components/navbar/container';
 
 function Layout (props){
     return(
         <>  
-        <Navbar/>
+       {/*  <Navbar/> */}
         {props.children}
         </>
     );

@@ -41,6 +41,7 @@
   },
   "devDependencies": {
     "node-sass": "^5.0.0",
+    "prop-types": "^15.7.2",
     "redux-immutable-state-invariant": "^2.1.0",
     "redux-promise-middleware": "^6.1.2"
   }

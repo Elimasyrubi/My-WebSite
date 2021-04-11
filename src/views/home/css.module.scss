@@ -1,3 +1,24 @@
-.title{
-    color: #fff;
+@keyframes Fade {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 100;
+    }
+}
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    transition: 1s;
+  
+}
+.heroDark{
+    background-image: url('../../assets/mobileHeroBackground.svg');
+    animation: fade;
+
+}
+.heroLight{
+    animation: fade;
+    background-image: url('../../assets/mobileHeroBackgroundLight.svg');
 }

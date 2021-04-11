@@ -1,3 +1,187 @@
-.title{
-    color: #fff;
+@import "../../general";
+
+@keyframes fadeRight {
+  0%{
+    right: 0;
+  }
+  50%{
+    right: 50%;
+  }
+  100%{
+    left: 0;
+  }
+};
+@keyframes fadeLeft {
+  0%{
+    left: 0;
+  }
+  50%{
+    left: 50%;
+  }
+  100%{
+    right: -5px;
+  }
+};
+
+
+
+
+.container {
+  max-width: 95%;
+  margin: 0 auto;
+	position: relative;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+		padding: 1rem 0;
+    .name {
+      color: $light;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    .right{
+      display: flex;
+    }
+    .menuHamburger {
+      width: 33px;
+      height: 33px;
+      border-radius: 0.2rem;
+			/* Tablet */
+			@media (min-width: 768px) { 
+				display: none;
+			}
+      i {
+        font-size: 1.3rem;
+      }
+    }
+
+    /* DARK MODE */
+    .label{
+      --toggle-color: #3A3E56;
+      --height: 1.5rem;
+      display: inline-block;
+      width: 45px;
+      height: 1.5rem;
+      border-radius: 2rem;
+      position: relative;
+      margin-right: 2rem;
+      &:hover{
+        cursor: pointer;
+      }
+      input{
+        opacity: 100;
+      }
+      span{
+        width: 27px;
+        height: 27px;
+        display: flex;
+        justify-content: center;
+        align-items: center ;
+        border-radius: 50%;
+        position: absolute;
+        top: -5px;
+        transition: .5s;
+        i{
+          color: #FFB800;
+        }
+      }
+      .spanDark{
+        background-color: $dark;
+        border-color: #183148;
+        animation: fadeRight .5s;
+      }
+      .spanLight{
+        background-color: $light; 
+        border: 2px solid $color03;
+       animation: fadeLeft .5s;
+       right: -5px;
+      }
+    }
+    .inputDarkmode{
+      background: #3A3E56;
+      border: 2px solid #183248;
+    }
+    .inputLightmode{
+      background: $color03;
+      border: 2px solid $color03;
+    }
+  }
+  /* desktop right button */
+  .desktopRightContainer{
+    display: flex;
+    align-items: center;
+  }
+  .desktopButtons{
+    display: none;
+    @media (min-width: 768px) { 
+      display: flex;
+    }
+  }
+
+  /* desktop right nav buttons */
+  .btn{
+    display: block;
+    width: 15rem;
+    text-align: center;
+    border-radius: .8rem;
+    font-weight: bold;
 }
+.blueButton{
+    padding: .8rem 1rem;
+    background-color: $color03;
+    color: $light;
+    font-size: 1.2rem;
+    transition: .2s;
+    &:hover{
+      transform: scale(1.1);
+    }
+}
+.bntWhite{
+    border-radius: .8rem;
+    padding: .8rem 1rem;  
+    display: block;
+    background-color: none;
+    color: $light;
+    font-size: 1.2rem;
+    border: 2px solid $light;
+    margin-right: 2rem;
+    transition: .2s;
+    &:hover{
+      transform: scale(1.1);
+    }
+    i{
+        font-size: 1.5rem;
+        margin-right: .5rem;
+    }
+}
+.lenguageButton{
+    background: none;
+    color: $light;
+    padding: .5rem;
+    align-items: center;
+    margin-right: 2rem;
+    display: none;
+    transition: .2s;
+    border-radius: .8rem;
+    @media (min-width: 768px) { 
+      display: flex;
+    }
+    &:hover{
+      cursor: pointer;
+      background-color: $light;
+      color: $dark;
+    }
+    img{
+        max-width: 33px;
+        margin-right: 1rem;
+        border-radius: .2rem;
+    }
+    p{
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+}
+}
+

@@ -1,0 +1,75 @@
+@import '../../../general';
+
+@keyframes menuAnimation {
+    0% {
+        transform: rotateY(-20deg);
+      }
+      100% {
+        transform: rotateY(0deg);
+      }
+  }
+
+.container{
+    width: 20rem;
+    padding: 0 0 1rem 1rem;
+    background-color: $light ;
+    border-radius: .5rem;
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    animation: menuAnimation .2s;
+    .closeButton{
+        width: 33px;
+        height: 33px;
+        border-radius: 0.2rem;
+        margin: 0 0 0 auto; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: none;
+        i{
+            font-size: 1.5rem;
+        }
+    }
+    .btn{
+        display: block;
+        width: 90%;
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+    }
+    .blueButton{
+        padding: 1.2rem 1rem;
+        background-color: $color03;
+        color: $light;
+        font-size: 1.2rem;
+    }
+    .bntWhite{
+        padding: 1rem;
+        display: block;
+        background-color: $light;
+        color: $dark;
+        font-size: 1.2rem;
+        border: 2px solid $dark;
+        i{
+            font-size: 1.5rem;
+            margin-right: .5rem;
+        }
+    }
+    .lenguageButton{
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        border: 2px solid $dark;
+        img{
+            max-width: 33px;
+            margin-right: 1rem;
+            border-radius: .2rem;
+        }
+        p{
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    }
+}
