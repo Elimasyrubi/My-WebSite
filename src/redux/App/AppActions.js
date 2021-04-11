@@ -8,4 +8,8 @@ export const changeLenguage = (lenguage) =>({
     type: types.CHANGE_LENGUAGE,
     meta: lenguage,
 })
+export const setScrool = (scroll) =>({
+    type: types.SET_SCROLL,
+    meta: scroll,
+})
 

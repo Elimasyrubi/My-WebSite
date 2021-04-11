@@ -1,9 +1,11 @@
-import NavbarView from './presentational';
+// Dependence
+import PropTypes from 'prop-types';
 import {useDispatch, useSelector} from 'react-redux'
 import { useState } from 'react';
 import {changeThemeMode, changeLenguage} from '../../redux/App/AppActions'
+import NavbarView from './presentational';
 
-const Navbar = () => {
+const Navbar = ({fixed}) => {
     //state
     const [showDropDown, setShowDropDown] = useState(false);
 
@@ -50,8 +52,16 @@ const Navbar = () => {
         closeDropDownFn={closeDropDownFn}
         themeMode={themeMode}
         changeThemeColor={changeThemeColor}
+        fixed={fixed}
         />
      );
 }
+
+Navbar.defaultProps = {
+    fixed: false,
+}
+Navbar.propTypes = {
+	fixed: PropTypes.bool,
+};
  
 export default Navbar;
