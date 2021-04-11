@@ -1,14 +1,15 @@
-import HomeView from './presentational'
-import { useSelector} from 'react-redux'
+import HomeView from './presentational';
+import { useSelector} from 'react-redux';
 
 const Home = () => {
        // Lenguague state
-       const { lenguage } = useSelector(({appReducer})=> appReducer);
-       const { themeMode } = useSelector(({appReducer})=> appReducer);
-
+       const { lenguage, themeMode, scroll } = useSelector(({appReducer})=> appReducer);
+      
+  
     return ( <HomeView
         lenguage={lenguage}
         themeMode={themeMode}
+        scroll={scroll}
     />  );
 }
  

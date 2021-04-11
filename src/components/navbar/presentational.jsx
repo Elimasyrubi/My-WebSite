@@ -16,6 +16,7 @@ const NavbarView = ({
 	showDropDownFn,
 	closeDropDownFn,
 	themeMode,
+	fixed
 }) => {
 
 
@@ -23,84 +24,118 @@ const NavbarView = ({
 	const renderBlueButton = () => {
 		return (
 			<div className={css.desktopButtons}>
-				<a className={css.bntWhite} href='#'>
+				<a
+
+					className={
+						`${fixed && themeMode === 'dark' ? `${css.btnFixed} ${css.btnCvDark}` : null}  
+					${fixed && themeMode === 'light' ? `${css.btnFixed} ${css.btnCvLight}` : null}  
+					${css.bntCv}
+					`
+					} href='#'>
 					<i className="fas fa-file-download"></i>
 					CV
 				</a>
-				<a href='#' className={`${css.btn} ${css.blueButton}`}>
+
+				<a href='#'
+					className={`
+					${fixed ? `${css.btnFixed}` : null}  
+					${css.btn} ${css.blueButton}
+				`}>
 					{lenguage === 'es' && 'Creemos Algo Juntos!'}
 					{lenguage === 'en' && `Let's Work Together`}
 				</a>
 			</div>
 		)
 	}
+	console.log(fixed)
 	return (
-		<div className={css.container}>
-			<nav>
-				<p className={css.name}>Eliezer Mas y rubi</p>
-				<div className={css.right}>
-					<div className={css.desktopRightContainer}>
-						{/* Lenguage */}
-						{lenguage === 'en' &&
-							<button
-								onClick={() => changeLenguageFn('es')}
-								className={css.lenguageButton}
-								type='button'>
-								<img src={spainFlag} alt="england Flag" />
-								<p>Es</p>
-							</button>
-						}
-						{lenguage === 'es' &&
-							<button
-								onClick={() => changeLenguageFn('en')}
-								className={css.lenguageButton}
-								type='button'>
-								<img src={EnglandFlag} alt="england Flag" />
-								<p>En</p>
-							</button>
-						}
-						{/* dark mode */}
-						<label className={themeMode === 'dark'
-							? ` ${css.label} ${css.inputDarkmode}`
-							: `${css.label} ${css.inputLightmode}`}
-						>
-							<input
-								id='darkModeInput'
-								onClick={changeThemeColor}
-								type="button"
-							/>
-							<span
-								className={themeMode === 'dark'
-									? `  ${css.spanDark}`
-									: ` ${css.spanLight}`}
-							>
-								{themeMode === 'dark' && <i className="fas fa-moon"></i>}
-								{themeMode === 'light' && <i className="fas fa-sun"></i>}
-							</span>
-						</label>
-						{renderBlueButton()}
+		<div
+			className={`
+			${fixed && themeMode === 'dark' ? `${css.fixed} ${css.fixedDark}` : null}  
+			${fixed && themeMode === 'light' ? `${css.fixed} ${css.fixedLight}` : null}  
+		`}
+		>
 
+			<div className={css.container}>
+				<nav
+					className={fixed ? `${css.navFixed}`: null}
+				>
+					<p className={`
+					${fixed && themeMode === 'dark' ? `${css.nameDark} ` : null}  
+					${fixed && themeMode === 'light' ? `${css.nameLight} ` : null}  
+					${css.name}
+					`}>Eliezer Mas y rubi
+					</p>
+					<div className={css.right}>
+						<div className={css.desktopRightContainer}>
+							{/* Lenguage */}
+							{lenguage === 'en' &&
+								<button
+									onClick={() => changeLenguageFn('es')}
+									className={`
+									${fixed && themeMode === 'dark' ? `${css.lenDark} ` : null}  
+									${fixed && themeMode === 'light' ? `${css.lenLight} ` : null} 
+									${css.lenguageButton}`}
+									type='button'>
+									<img src={spainFlag} alt="england Flag" />
+									<p>Es</p>
+								</button>
+							}
+							{lenguage === 'es' &&
+								<button
+									onClick={() => changeLenguageFn('en')}
+									className={`
+									${fixed && themeMode === 'dark' ? `${css.lenDark} ` : null}  
+									${fixed && themeMode === 'light' ? `${css.lenLight} ` : null} 	
+									${css.lenguageButton}`}
+									type='button'>
+									<img src={EnglandFlag} alt="england Flag" />
+									<p>En</p>
+								</button>
+							}
+							{/* dark mode */}
+							<label className={themeMode === 'dark'
+								? ` ${css.label} ${css.inputDarkmode}`
+								: `${css.label} ${css.inputLightmode}`}
+							>
+								<input
+									id='darkModeInput'
+									onClick={changeThemeColor}
+									type="button"
+								/>
+								<span
+									className={themeMode === 'dark'
+										? `  ${css.spanDark}`
+										: ` ${css.spanLight}`}
+								>
+									{themeMode === 'dark' && <i className="fas fa-moon"></i>}
+									{themeMode === 'light' && <i className="fas fa-sun"></i>}
+								</span>
+							</label>
+							{renderBlueButton()}
+
+						</div>
+
+						{/* Hamburger Buttom */}
+						<button
+							onClick={showDropDownFn}
+							className={css.menuHamburger}
+							type='button'>
+							<i className="fas fa-bars"></i>
+						</button>
 					</div>
 
-					{/* Hamburger Buttom */}
-					<button
-						onClick={showDropDownFn}
-						className={css.menuHamburger}
-						type='button'>
-						<i className="fas fa-bars"></i>
-					</button>
-				</div>
+				</nav>
 
-			</nav>
+				{showDropDown === true
+					? <DropDownView
+						closeDropDownFn={closeDropDownFn}
+						lenguage={lenguage}
+						changeLenguageFn={changeLenguageFn}
+					/>
+					: null}
 
-			{showDropDown === true
-				? <DropDownView
-					closeDropDownFn={closeDropDownFn}
-					lenguage={lenguage}
-					changeLenguageFn={changeLenguageFn}
-				/>
-				: null}
-
+			</div>
 		</div>
 	);
 }
@@ -113,6 +148,7 @@ NavbarView.propTypes = {
 	showDropDownFn: PropTypes.func.isRequired,
 	closeDropDownFn: PropTypes.func.isRequired,
 	themeMode: PropTypes.string.isRequired,
+	fixed: PropTypes.bool.isRequired,
 };
 
 export default NavbarView;

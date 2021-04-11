@@ -1,12 +1,15 @@
 export const types = {
     CHANGE_THEME_MODE: 'CHANGE_THEME_MODE',
     CHANGE_LENGUAGE: 'CHANGE_LENGUAGE',
+    SET_SCROLL: 'SET_SCROLL',
+
 }
 
 //state
 const initialState = {
     themeMode : 'light',
-    lenguage: 'es'
+    lenguage: 'es',
+    scroll: 0,
 }
 
 //Get LocalStorage
@@ -42,6 +45,12 @@ export const appReducer = (state = initialState, action) =>{
             return{
                 ...state,
                 lenguage: action.meta,
+            };
+        }
+        case types.SET_SCROLL:{
+            return{
+                ...state,
+                scroll: action.meta,
             };
         }
         default:

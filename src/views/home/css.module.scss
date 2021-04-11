@@ -1,3 +1,5 @@
+@import '../../general';
+
 @keyframes Fade {
     from{
         opacity: 0;
@@ -11,14 +13,16 @@
     height: 100vh;
     background-size: cover;
     transition: 1s;
-  
 }
 .heroDark{
     background-image: url('../../assets/mobileHeroBackground.svg');
     animation: fade;
-
 }
 .heroLight{
     animation: fade;
     background-image: url('../../assets/mobileHeroBackgroundLight.svg');
+}
+.down{
+    height: 100vh;
+    background-color: $light;
 }
