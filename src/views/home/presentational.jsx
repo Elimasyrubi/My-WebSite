@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 //component
 import Navbar from '../../components/navbar/container';
 import HomeContentMobile from '../../homeContent/homeMobileContent';
-import MainRecomendations from '../../content/Recomendations';
-import RecomendationsBox from '../../components/RecomendationBox/presentational'
+import {MainRecomendations, Recomendations } from '../../content/Recomendations';
+import RecomendationsBox from '../../components/RecomendationBox/presentational';
+import Modal from '../../components/Modal/index'
 //Images
 import ReactLogo from '../../assets/reactLogo.png';
 import JavaScriptLogo from '../../assets/javascriptLogo.png';
@@ -13,7 +14,14 @@ import XdLogo from '../../assets/xdLogo.png';
 //Style
 import css from './css.module.scss'
 
-const HomeView = ({ lenguage, themeMode, scroll }) => {
+const HomeView = ({ 
+	lenguage,
+	themeMode,
+	scroll,
+	openRecomendationModalFn,
+  closeRecomendationModalFn,
+	recomendationModal,
+ }) => {
 	return (
 		<>
 			<div className={themeMode === 'dark'
@@ -70,8 +78,7 @@ const HomeView = ({ lenguage, themeMode, scroll }) => {
 					<HomeContentMobile />
 				</div>
 
-				<section>
-
+				<section className={css.recomendations}>
 					<h2
 						className={`
             ${themeMode === 'dark' && `${css.subTitle} ${css.dark}`}
@@ -94,10 +101,39 @@ const HomeView = ({ lenguage, themeMode, scroll }) => {
 							userImage={item.userImage}
 							name={item.name}
 							profession={item.profession}
+							url={item.url}
 						/>
 						))}
-
 					</div>
+					{recomendationModal &&
+						<Modal
+						onClose={closeRecomendationModalFn}
+						withClose
+						>
+							<div className={css.modalRecomendationsContainer}>
+							{Recomendations.map((item)=>(
+						<RecomendationsBox
+							key={item.name}
+							textEn={item.textEn}
+							textEs={item.textEs}
+							userImage={item.userImage}
+							name={item.name}
+							profession={item.profession}
+							url={item.url}
+						/>
+						))}
+							</div>
+						</Modal> }
+					<button 
+					className={`
+            ${themeMode === 'dark' && `${css.verMasButton} ${css.dark}`}
+            ${themeMode === 'light' && `${css.verMasButton} ${css.light}`}`}
+					onClick={openRecomendationModalFn}
+					type='button'
+					><i className="fas fa-eye"></i>
+						{lenguage === 'es' ? 'Ver Mas' : null}
+						{lenguage === 'en' ? 'See More' : null}
+					</button>
 				</section>
 			</div>
 		</>
@@ -109,6 +145,9 @@ HomeView.propTypes = {
 	lenguage: PropTypes.string.isRequired,
 	themeMode: PropTypes.string.isRequired,
 	scroll: PropTypes.number.isRequired,
+	openRecomendationModalFn: PropTypes.func.isRequired,
+  closeRecomendationModalFn: PropTypes.func.isRequired,
+	recomendationModal: PropTypes.bool.isRequired,
 };
 
 export default HomeView;

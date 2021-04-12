@@ -1,0 +1,183 @@
+@import '../../general';
+
+@keyframes open-modal {
+  from {
+    transform: scale(0.4);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.container__modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  .loaderContainer {
+    width: 100%;
+  }
+  .all-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    max-height: 45rem;
+    position: relative;
+    border-radius: 0.5rem;
+    animation-name: open-modal;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+    @media only screen and (max-width: 850px), (max-height: 920px) {
+      max-height: 85vh;
+    }
+    @media only screen and (max-width: 650px), (max-height: 720px) {
+      max-height: 85vh;
+    }
+    .closeButton {
+      position: absolute;
+      right: 30px;
+      top: 20px;
+      font-size: 1.5em;
+      cursor: pointer;
+      transition: 0.5s;
+      color: $dark;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+  .backDark{
+      background: $dark;
+  }
+  .backLight{
+    background: $light;
+  }
+
+  .errorModal {
+    font-size: 1rem;
+    margin: 0;
+
+    @media only screen and (max-width: 850px), (max-height: 920px) {
+      font-size: 0.8rem;
+      line-height: 0;
+    }
+
+    @media only screen and (max-width: 650px), (max-height: 720px) {
+      font-size: 0.7rem;
+    }
+
+    @media only screen and (max-width: 500px), (max-height: 520px) {
+      font-size: 0.5rem;
+    }
+  }
+
+  .container__modal--content {
+    padding: 2.71rem;
+    border-bottom: 1px solid $gray;
+    height: 90%;
+    width: 100%;
+    overflow: scroll;
+
+    @media only screen and (max-width: 850px), (max-height: 920px) {
+      padding: 2.5rem;
+    }
+
+    @media only screen and (max-width: 650px), (max-height: 720px) {
+      padding: 2.3rem;
+    }
+
+    @media only screen and (max-width: 500px), (max-height: 520px) {
+      padding: 1.5rem;
+    }
+  }
+
+  .container__modal--actions {
+    display: flex;
+    align-items: center;
+    padding: 0.2rem;
+    flex-wrap: wrap;
+
+    @media only screen and (max-width: 850px), (max-height: 920px) {
+      padding: 0.1rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+      margin-top: 1rem;
+    }
+
+    .container__list-buttons {
+      display: flex;
+      flex-wrap: wrap;
+
+      button {
+        width: 5.71rem;
+        height: 2.42rem;
+        cursor: pointer;
+        border-radius: 0.35rem;
+        font-size: 1rem;
+
+        @media only screen and (max-width: 850px), (max-height: 920px) {
+          width: 5.4rem;
+          height: 2.2rem;
+          font-size: 0.8rem;
+        }
+
+        @media only screen and (max-width: 650px), (max-height: 720px) {
+          width: 5rem;
+          height: 2rem;
+          font-size: 0.7rem;
+        }
+
+        @media only screen and (max-width: 500px), (max-height: 520px) {
+          width: 4rem;
+          height: 1.5rem;
+          font-size: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .container__list-buttons--item {
+    margin: 0.5rem 1rem;
+  }
+
+  .container__actions--item {
+    margin: 0.1rem;
+  }
+
+  .blue {
+    background-color: red;
+    color: red;
+  }
+
+  .transparent {
+    background-color: transparent;
+    color: red;
+  }
+
+  .center {
+    justify-content: center;
+  }
+
+  .right {
+    justify-content: flex-end;
+
+    @media only screen and (max-width: 600px) {
+      justify-content: center;
+    }
+  }
+
+  .left1 {
+    justify-content: flex-start;
+
+    @media only screen and (max-width: 600px) {
+      justify-content: center;
+    }
+  }
+}

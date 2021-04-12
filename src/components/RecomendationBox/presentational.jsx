@@ -3,7 +3,7 @@ import css from './css.module.scss';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 
-const RecomendationsBox = ({ textEn, textEs, userImage, name , profession }) => {
+const RecomendationsBox = ({ textEn, textEs, userImage, name , profession, url }) => {
     const {themeMode, lenguage} = useSelector(({appReducer}) => appReducer)
     return (
         <div className={`
@@ -21,13 +21,13 @@ const RecomendationsBox = ({ textEn, textEs, userImage, name , profession }) => 
             </p>
             <div className={css.userBox}>
                 <img src={userImage} alt={name} />
-                <div className={css.userInfo}>
+                <a href={url} target="_blank" className={css.userInfo} rel="noreferrer">
                     <p className={`
                      ${themeMode === 'dark' && `${css.Dark} ${css.name}`}
                      ${themeMode === 'light' && `${css.Light} ${css.name}`}
                     `}>{name}</p>
                     <span className={css.profession}>{profession}</span>
-                </div>
+                </a>
             </div>
         </div>
     );
@@ -39,5 +39,6 @@ textEs: PropTypes.string.isRequired,
 userImage: PropTypes.string.isRequired,
 name: PropTypes.string.isRequired,
 profession: PropTypes.string.isRequired,
+url: PropTypes.string.isRequired,
 };
 export default RecomendationsBox;
