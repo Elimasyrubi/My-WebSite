@@ -134,44 +134,11 @@
 		}
 	}
 	.recomendationsContainer{
-		.recomendationsBox{
-			background: $light;
-			padding: 1.5rem;
-			border-radius: 1rem;
-			.text{
-				font-size: 1.2rem;
-				line-height: 1.5;
-				i{
-					font-size: 2rem;
-					margin: 0 .5rem;
-					color: gray;
-				}
-			}
-			.userBox{
-				margin-top: 1rem;
-				display: flex;
-				align-items: center;
-				img{
-					width: 10rem;
-					border-radius: 50%;
-					margin-right: 1rem;
-				}
-				.userInfo{
-					.name{
-						font-size: 1.4rem;
-						font-weight: bold;
-	
-					}
-					.profession{
-						line-height: 1.5;
-						color: gray;
-	
-					}
-				}
-			
-			}
-
-		}
+    /* Tablet */
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
 	}
 
 }

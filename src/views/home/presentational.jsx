@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Navbar from '../../components/navbar/container';
 import HomeContentMobile from '../../homeContent/homeMobileContent';
 import MainRecomendations from '../../content/Recomendations';
+import RecomendationsBox from '../../components/RecomendationBox/presentational'
 //Images
 import ReactLogo from '../../assets/reactLogo.png';
 import JavaScriptLogo from '../../assets/javascriptLogo.png';
@@ -86,22 +87,14 @@ const HomeView = ({ lenguage, themeMode, scroll }) => {
 					</h2>
 					<div className={css.recomendationsContainer}>
 						{MainRecomendations.map((item)=>(
-							<div 
-								className={css.recomendationsBox}
-								key={item.name}>
-									<p className={css.text}>
-									<i className="fas fa-quote-left"></i>
-										{item.text}
-										<i className="fas fa-quote-right"></i>
-										</p>
-									<div className={css.userBox}>
-											<img src={item.userImage} alt={item.name}/>
-											<div className={css.userInfo}>
-											<p className={css.name}>{item.name}</p>
-											<span className={css.profession}>{item.profession}</span>
-											</div>
-									</div>
-							</div>
+						<RecomendationsBox
+							key={item.name}
+							textEn={item.textEn}
+							textEs={item.textEs}
+							userImage={item.userImage}
+							name={item.name}
+							profession={item.profession}
+						/>
 						))}
 
 					</div>

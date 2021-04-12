@@ -1,0 +1,57 @@
+@import '../../general';
+
+.boxDark{
+	background: $darkSecond;
+}
+.boxLight{
+	background: $White;
+	box-shadow:  0 0 5px #bbbbbb;
+}
+.Dark{
+	color: $light;
+}
+.Light{
+	color: $dark;
+}
+.recomendationsBox{
+		margin-bottom: 1rem;
+			/* Tablet */
+		@media (min-width: 768px) {
+			max-width: 48%;
+		 }
+    padding: 1.5rem;
+    border-radius: 1rem;
+    .text{
+        font-size: 1.2rem;
+        line-height: 1.5;
+        i{
+            font-size: 2rem;
+            margin: 0 .5rem;
+            color: gray;
+        }
+    }	
+    .userBox{
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        img{
+            width: 5rem;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+        .userInfo{
+            .name{
+                font-size: 1.4rem;
+                font-weight: bold;
+
+            }
+            .profession{
+                line-height: 1.5;
+                color: gray;
+
+            }
+        }
+    
+    }
+
+}
