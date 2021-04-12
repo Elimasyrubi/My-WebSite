@@ -1,0 +1,17 @@
+@import "../../general";
+
+.container {
+  .light{
+    color: $dark;
+  }
+  .dark{
+    color: $light;
+  }
+  .subTitle {
+    @include subTitle;
+  }
+  .text {
+    @include textMobile;
+    @include spanMobile;
+  }
+}
