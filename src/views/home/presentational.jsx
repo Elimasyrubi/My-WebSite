@@ -2,6 +2,7 @@
 import PropTypes from 'prop-types';
 //component
 import Navbar from '../../components/navbar/container';
+import HomeContentMobile from '../../homeContent/homeMobileContent'
 //Images
 import ReactLogo from '../../assets/reactLogo.png';
 import JavaScriptLogo from '../../assets/javascriptLogo.png';
@@ -27,8 +28,10 @@ const HomeView = ({ lenguage, themeMode, scroll }) => {
 						<div className={css.heroImage}>
 						</div>
 						<div className={css.heroContentLeft}>
-							{lenguage === 'es' ? <h2>Desarrollador Frontend</h2> : null}
-							{lenguage === 'en' ? <h2>Frontend Developer</h2> : null}
+						<h2 className={css.subTitle}>
+							{lenguage === 'es' ? 'Desarrollador Frontend' : null}
+							{lenguage === 'en' ? 'Frontend Developer' : null}
+							</h2>
 							<ul className={css.box}>
 								<li>
 									<img src={ReactLogo} alt="React Logo" />
@@ -39,7 +42,10 @@ const HomeView = ({ lenguage, themeMode, scroll }) => {
 									<span>Javascript</span>
 								</li>
 							</ul>
-							<h2 className={css.subTitle}>UI/UX Designer</h2>
+							<h2 className={css.subTitle}>
+							{lenguage === 'es' ? 'Diseñador UX/UI' : null}
+							{lenguage === 'en' ? 'UX/UI Designer' : null}
+							</h2>
 							<ul className={css.box}>
 								<li>
 									<img src={FigmaLogo} alt="React Logo" />
@@ -54,12 +60,27 @@ const HomeView = ({ lenguage, themeMode, scroll }) => {
 
 							{lenguage === 'en' ? <p>The knowledge and experience of both areas have given me the ability to create efficient and pleasant designs for both the user and the developers.</p> : null}
 						</div>
-
 					</div>
 				</div>
 			</div>
 			<div className={css.down}>
-
+				<div className={css.mobileContent}>
+					<HomeContentMobile />
+				</div>
+				
+				<h2 
+            className={`
+            ${themeMode === 'dark' && `${css.subTitle} ${css.dark}`}
+            ${themeMode === 'light' && `${css.subTitle} ${css.light}`}`}
+            >
+						<>
+						<i className="fas fa-star"></i>
+							<i className="fas fa-star"></i>
+							<i className="fas fa-star"></i>
+						</>
+                {lenguage === 'es' ? 'Recomendaciones' : null}
+                {lenguage === 'en' ? 'Recommendations' : null}
+            </h2>
 			</div>
 		</>
 

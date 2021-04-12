@@ -50,7 +50,7 @@
 }
 
 .container {
- @include mobileContainer;
+ @include generalContainer;
 	position: relative;
   animation: fadeIn 2s;
 
@@ -228,6 +228,7 @@
     p{
         font-size: 1.2rem;
         font-weight: bold;
+        color: $light;
     }
 }
 .lenDark{
