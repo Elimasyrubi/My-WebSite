@@ -9,23 +9,18 @@
   .dark{
     color: $light;
   }
-  .experienceBox{
-    padding-bottom: 1rem;
-    border-bottom: 1px solid rgb(194, 194, 194);
-  }
-  .subTitle {
+
+  .title {
     @include subTitle;
 
   }
-  .job {
+  .subtitle {
     margin-top: 2rem;
     margin-bottom: 0;
     font-size: 1.3rem;
     font-weight: bold
   }
-  .company{
-    color: gray;
-  }
+
   .text {
     margin-top: 1rem;
     @include textMobile;
