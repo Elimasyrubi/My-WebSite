@@ -8,7 +8,8 @@ import { MainRecomendations, Recomendations } from '../../content/Recomendations
 import RecomendationsBox from '../../components/RecomendationBox/presentational';
 import Modal from '../../components/Modal/index';
 import DesignPortfolioBox from '../../components/portfolioDesignBox/presentational';
-import Designs from '../../content/Designs'
+import Designs from '../../content/Designs';
+import AbouMeDesktop from '../../components/AboutMeDesktop/container';
 //Images
 import ReactLogo from '../../assets/reactLogo.png';
 import JavaScriptLogo from '../../assets/javascriptLogo.png';
@@ -128,6 +129,9 @@ const HomeView = ({
 			<div className={css.down}>
 				<div className={css.mobileContent}>
 					<HomeContentMobile />
+				</div>
+				<div className={css.desktopContent}>
+					<AbouMeDesktop />
 				</div>
 
 				<section className={css.recomendations}>

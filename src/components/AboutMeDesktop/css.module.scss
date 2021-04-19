@@ -1,0 +1,44 @@
+@import '../../general';
+
+.container{
+    @include generalContainer;
+    min-height: 10rem;
+    display: flex;
+    margin: 2rem 0;
+
+    .left{
+        width: 25%;
+        .box{
+            border-radius: 1rem;
+            background: $White;
+            padding: 1rem;
+            button{
+                display: block;
+                padding: 1.5rem 1rem;
+                width: 100%;
+                text-align: start;
+                background: none;
+                font-size: $text;
+                border-bottom: 1px solid $gray02;
+                border-radius: 1rem;
+                &:hover{
+                    cursor: pointer;
+                    background: $gray03;
+                }
+            }
+            .selected{
+                background: $color03;
+                color: $White;
+                &:hover{
+                    background: $color03;
+                }
+            }
+        }
+       
+    }
+    .right{
+        background:rgb(148, 148, 148);
+        width: 75%;
+
+    }
+}

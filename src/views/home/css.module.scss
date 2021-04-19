@@ -121,6 +121,12 @@
 		display: none;
 		}
 	}
+  .desktopContent{
+    display: none;
+    @media (min-width: 768px) {
+      display: block;
+      }
+  }
 	.subTitle {
 		margin: 2rem 0;
 		@include subTitle;
