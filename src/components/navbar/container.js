@@ -1,6 +1,6 @@
 // Dependence
 import PropTypes from 'prop-types';
-import {useDispatch, useSelector} from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux';
 import { useState } from 'react';
 import {changeThemeMode, changeLenguage} from '../../redux/App/AppActions'
 import NavbarView from './presentational';
@@ -13,8 +13,7 @@ const Navbar = ({fixed}) => {
     const dispatch = useDispatch()
 
     // Lenguague state
-    const { lenguage } = useSelector(({appReducer})=> appReducer);
-    const { themeMode } = useSelector(({appReducer})=> appReducer);
+    const { lenguage, themeMode } = useSelector(({appReducer})=> appReducer);
 
     //light mode
     const changeLenguageFn = (lenguage) =>{

@@ -1,0 +1,63 @@
+@import '../../general';
+
+.boxDark{
+	background: $darkSecond;
+}
+.boxLight{
+	background: $White;
+	box-shadow:  0 0 5px #bbbbbb;
+}
+.Dark{
+	color: $light;
+}
+.Light{
+	color: $dark;
+}
+.hidedesktop{
+	display: block;
+	@media (min-width: 768px) {
+		display: none;
+	}
+}
+.hideMobile{
+	display: none;
+	@media (min-width: 768px) {
+	display: block;
+	}
+}
+
+.box{
+	text-align: start;
+	background: none;
+	transition: .2s;
+	margin-bottom: 3rem;
+	&:hover{
+		transform: scale(1.02);
+		cursor: pointer;
+	}
+	/* Tablet */
+	@media (min-width: 768px) {
+		width: 250px;
+		margin-right: 5rem;
+	}
+
+	/* desktop large */
+	@media (min-width: 1200px) {
+		width: 330px;
+		margin-right: 5rem;
+	}
+
+	img{
+		max-width: 100%;
+		object-fit: contain;
+		@media (min-width: 768px) {
+			height: 200px;
+			max-width: 300px;
+		}
+	}
+	.title{
+		margin-top: 1rem;
+		font-size: $text;
+
+	}
+}

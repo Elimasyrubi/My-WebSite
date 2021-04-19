@@ -1,11 +1,14 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 // Dependence
 import PropTypes from 'prop-types';
 //component
 import Navbar from '../../components/navbar/container';
 import HomeContentMobile from '../../homeContent/homeMobileContent';
-import {MainRecomendations, Recomendations } from '../../content/Recomendations';
+import { MainRecomendations, Recomendations } from '../../content/Recomendations';
 import RecomendationsBox from '../../components/RecomendationBox/presentational';
-import Modal from '../../components/Modal/index'
+import Modal from '../../components/Modal/index';
+import DesignPortfolioBox from '../../components/portfolioDesignBox/presentational';
+import Designs from '../../content/Designs'
 //Images
 import ReactLogo from '../../assets/reactLogo.png';
 import JavaScriptLogo from '../../assets/javascriptLogo.png';
@@ -14,16 +17,65 @@ import XdLogo from '../../assets/xdLogo.png';
 //Style
 import css from './css.module.scss'
 
-const HomeView = ({ 
+const HomeView = ({
+	portfolioModal,
 	lenguage,
 	themeMode,
 	scroll,
 	openRecomendationModalFn,
-  closeRecomendationModalFn,
+	closeRecomendationModalFn,
+	closePortfolioModalFn,
+	openPortfolioModalFn,
 	recomendationModal,
- }) => {
+	descriptionDesign,
+	imgDesign,
+	titleDesign,
+
+}) => {
 	return (
 		<>
+			{recomendationModal &&
+				<Modal
+					onClose={closeRecomendationModalFn}
+					withClose
+				>
+					<div className={css.modalRecomendationsContainer}>
+						{Recomendations.map((item) => (
+							<RecomendationsBox
+								key={item.name}
+								textEn={item.textEn}
+								textEs={item.textEs}
+								userImage={item.userImage}
+								name={item.name}
+								profession={item.profession}
+								url={item.url}
+							/>
+						))}
+					</div>
+				</Modal>}
+
+			{portfolioModal &&
+				<Modal
+					onClose={closePortfolioModalFn}
+					withClose
+				>
+					<div className={css.modalPortFolio}>
+						<div className={css.ext}>
+							<h2
+								className={`
+									${themeMode === 'dark' && `${css.dark}`}
+									${themeMode === 'light' && `${css.light}`}`}
+							>	{titleDesign}</h2>
+							<p
+								className={`
+									${themeMode === 'dark' && `${css.dark}`}
+									${themeMode === 'light' && `${css.light}`}`}
+							>{descriptionDesign}</p>
+						</div>
+						<img src={imgDesign} alt="" />
+					</div>
+				</Modal>}
+
 			<div className={themeMode === 'dark'
 				? ` ${css.hero} ${css.heroDark}`
 				: ` ${css.hero} ${css.heroLight}`}
@@ -93,61 +145,157 @@ const HomeView = ({
 						{lenguage === 'en' ? 'Recommendations' : null}
 					</h2>
 					<div className={css.recomendationsContainer}>
-						{MainRecomendations.map((item)=>(
-						<RecomendationsBox
-							key={item.name}
-							textEn={item.textEn}
-							textEs={item.textEs}
-							userImage={item.userImage}
-							name={item.name}
-							profession={item.profession}
-							url={item.url}
-						/>
+						{MainRecomendations.map((item) => (
+							<RecomendationsBox
+								key={item.name}
+								textEn={item.textEn}
+								textEs={item.textEs}
+								userImage={item.userImage}
+								name={item.name}
+								profession={item.profession}
+								url={item.url}
+							/>
 						))}
 					</div>
-					{recomendationModal &&
-						<Modal
-						onClose={closeRecomendationModalFn}
-						withClose
-						>
-							<div className={css.modalRecomendationsContainer}>
-							{Recomendations.map((item)=>(
-						<RecomendationsBox
-							key={item.name}
-							textEn={item.textEn}
-							textEs={item.textEs}
-							userImage={item.userImage}
-							name={item.name}
-							profession={item.profession}
-							url={item.url}
-						/>
-						))}
-							</div>
-						</Modal> }
-					<button 
-					className={`
+
+					<button
+						className={`
             ${themeMode === 'dark' && `${css.verMasButton} ${css.dark}`}
             ${themeMode === 'light' && `${css.verMasButton} ${css.light}`}`}
-					onClick={openRecomendationModalFn}
-					type='button'
+						onClick={openRecomendationModalFn}
+						type='button'
 					><i className="fas fa-eye"></i>
 						{lenguage === 'es' ? 'Ver Mas' : null}
 						{lenguage === 'en' ? 'See More' : null}
 					</button>
 				</section>
+
+				<section className={css.portfolioDesign}>
+					<h2
+						className={`
+							${themeMode === 'dark' && `${css.subTitle} ${css.dark}`}
+							${themeMode === 'light' && `${css.subTitle} ${css.light}`}`}
+					>
+
+						{lenguage === 'es' ? 'Diseños UI/UX' : null}
+						{lenguage === 'en' ? 'UI/UX Designs' : null}
+					</h2>
+					<ul className={css.designPortfolio}>
+						{Designs.map((item => (
+							<li key={item.id}>
+								<DesignPortfolioBox
+									openPortfolioModalFn={openPortfolioModalFn}
+									id={item.id}
+									imgUrl={item.imgUrl}
+									title={item.title}
+									descriptions={item.descriptions}
+								/>
+							</li>
+						)))}
+					</ul>
+					<div className={css.btnContainer}>
+						<a href='#'
+							className={`
+					${css.btn} ${css.blueButton}
+				`}>
+							{lenguage === 'es' && 'Creemos Algo Juntos!'}
+							{lenguage === 'en' && `Let's Work Together`}
+						</a>
+
+					</div>
+
+				</section>
+
+
+				<section className={css.projects}>
+					<h2
+						className={`
+							${themeMode === 'dark' && `${css.subTitle} ${css.dark}`}
+							${themeMode === 'light' && `${css.subTitle} ${css.light}`}`}
+					>
+
+						{lenguage === 'es' ? 'Proyectos donde he participado' : null}
+						{lenguage === 'en' ? 'Projects where I have participated' : null}
+					</h2>
+					<ul>
+						<li>
+							<img src="https://palabras.ga/wp-content/uploads/2021/04/image-30-1.png" alt="The Glew WebSite" />
+							<div className={css.text}>
+								<h3
+									className={`
+								${themeMode === 'dark' && `${css.dark}`}
+								${themeMode === 'light' && `${css.light}`}`}
+								>The Glew</h3>
+								<p
+									className={`
+								${themeMode === 'dark' && `${css.dark}`}
+								${themeMode === 'light' && `${css.light}`}`}
+								>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+								<p
+									className={`
+								${themeMode === 'dark' && `${css.dark}`}
+								${themeMode === 'light' && `${css.light}`}`}
+								>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+							</div>
+						</li>
+						<li>
+							<img src="https://palabras.ga/wp-content/uploads/2021/04/image-31.png" alt="Smiles WebSite" />
+							<div className={css.text}>
+								<h3
+									className={`
+								${themeMode === 'dark' && `${css.dark}`}
+								${themeMode === 'light' && `${css.light}`}`}
+								>Smiles</h3>
+								<p
+									className={`
+								${themeMode === 'dark' && `${css.dark}`}
+								${themeMode === 'light' && `${css.light}`}`}
+								>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+								<p
+									className={`
+								${themeMode === 'dark' && `${css.dark}`}
+								${themeMode === 'light' && `${css.light}`}`}
+								>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+							</div>
+						</li>
+					</ul>
+					<div className={css.btnContainer}>
+						<a href='#'
+							className={`
+					${css.btn} ${css.blueButton}
+				`}>
+							{lenguage === 'es' && 'Creemos Algo Juntos!'}
+							{lenguage === 'en' && `Let's Work Together`}
+						</a>
+
+					</div>
+
+				</section>
+				<section className={css.space}></section>
 			</div>
 		</>
 
 	);
 }
 
+HomeView.defaultProps = {
+	descriptionDesign: '',
+	imgDesign: '',
+	titleDesign: '',
+}
 HomeView.propTypes = {
 	lenguage: PropTypes.string.isRequired,
 	themeMode: PropTypes.string.isRequired,
 	scroll: PropTypes.number.isRequired,
 	openRecomendationModalFn: PropTypes.func.isRequired,
-  closeRecomendationModalFn: PropTypes.func.isRequired,
+	closeRecomendationModalFn: PropTypes.func.isRequired,
 	recomendationModal: PropTypes.bool.isRequired,
+	closePortfolioModalFn: PropTypes.func.isRequired,
+	openPortfolioModalFn: PropTypes.func.isRequired,
+	portfolioModal: PropTypes.bool.isRequired,
+	descriptionDesign: PropTypes.string,
+	imgDesign: PropTypes.string,
+	titleDesign: PropTypes.string,
 };
 
 export default HomeView;

@@ -218,7 +218,10 @@
     &:hover{
       cursor: pointer;
       background-color: $light;
-      color: $dark;
+      p{
+        color: $dark;
+
+      }
     }
     img{
         max-width: 33px;
@@ -230,12 +233,12 @@
         font-weight: bold;
         color: $light;
     }
-}
-.lenDark{
-  color: $light;
-}
-.lenLight{
-  color: $light;
-}
+  }
+  .lenDark{
+    color: $light;
+  }
+  .lenLight{
+    color: $light;
+  }
 }
 
