@@ -1,0 +1,63 @@
+@import "../../../general";
+
+.container {
+  margin-bottom: 2rem;
+  .light {
+    color: $dark;
+  }
+  .dark {
+    color: $light;
+  }
+  .subTitle {
+    @include subTitle;
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+  .text {
+    @include textMobile;
+    @include spanMobile;
+  }
+  .listflexd{
+    @media (min-width: 768px) {
+      max-width: 600px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      ul{
+        width: 50%;
+        li{
+          margin: .5rem 0;
+        }
+      }
+      p{
+        width: 50%;
+      }
+    }
+  }
+  ul {
+    margin-bottom: 2rem;
+    li {
+      display: flex;
+      align-items: center;
+      @include textMobile;
+      img {
+        margin-right: 1rem;
+        width: 2rem;
+        object-fit: contain;
+      }
+      
+    }
+    @media (min-width: 768px) {
+      flex-direction: column;
+    }
+  }
+  h3 {
+    margin: 2rem 0;
+		font-weight: 400;
+    font-size: 1.5rem;
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+}

@@ -205,19 +205,14 @@ const HomeView = ({
 							{lenguage === 'es' && 'Creemos Algo Juntos!'}
 							{lenguage === 'en' && `Let's Work Together`}
 						</a>
-
 					</div>
-
 				</section>
-
-
 				<section className={css.projects}>
 					<h2
 						className={`
 							${themeMode === 'dark' && `${css.subTitle} ${css.dark}`}
 							${themeMode === 'light' && `${css.subTitle} ${css.light}`}`}
 					>
-
 						{lenguage === 'es' ? 'Proyectos donde he participado' : null}
 						{lenguage === 'en' ? 'Projects where I have participated' : null}
 					</h2>

@@ -1,0 +1,55 @@
+@import "../../general";
+
+.container {
+  .light {
+    color: $dark;
+  }
+  .dark {
+    color: $light;
+  }
+
+  .title {
+    @include subTitle;
+  }
+
+  .btn {
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+    background: none;
+    border: 1px solid $gray;
+    margin: 1rem 0 0 0;
+    font-size: 1.3rem;
+    font-weight: 400;
+    transition: 0.2s;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
+  
+  .btnDark {
+    color: $light;
+  }
+
+  .btnActive {
+    border: 1px solid $yellow;
+    background: $yellow;
+    color: $dark;
+  }
+
+/*   .text {
+    margin-top: 1rem;
+    @include textMobile;
+    @include spanMobile;
+  } */
+  ul {
+    display: flex;
+    li {
+      margin-right: 5rem;
+    }
+  }
+
+  .content{
+      margin-top: 2rem;
+  }
+}
