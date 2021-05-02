@@ -19,7 +19,7 @@ const KnowledgeDesign = () => {
 		{ icon: IconHand, text: 'Prototipos' },
 		{ icon: IconPhotoShop, text: 'Photoshop' },
 		{ icon: IconCorel, text: 'CorelDraw' },
-		{ icon: IconIllustrator, text: 'Ilustrator' },
+		{ icon: IconIllustrator, text: 'Illustrator' },
 	];
 
 
@@ -54,7 +54,7 @@ const KnowledgeDesign = () => {
                     ${themeMode === 'dark' && `${css.text} ${css.dark}`}
                     ${themeMode === 'light' && `${css.text} ${css.light}`}
                     `}>
-						Actualmente Estoy  cursando la escula de Diseño UI de Platzi, ampliando asi mis conocimientos en el Area.
+						Actualmente Estoy  cursando la escuela de Diseño UI de Platzi, ampliando asi mis conocimientos en el Área.
                     </p>
 				}
 				{lenguage === 'en'
@@ -62,7 +62,7 @@ const KnowledgeDesign = () => {
                     ${themeMode === 'dark' && `${css.text} ${css.dark}`}
                     ${themeMode === 'light' && `${css.text} ${css.light}`}
                     `}>
-						Currently I am studying the UI Design school at Platzi, thus expanding my knowledge in the Area.
+						Currently I am studying the UI Design school at Platzi, thus expanding my knowledge in the Área.
                     </p>
 				}
 			</div>

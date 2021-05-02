@@ -18,7 +18,7 @@ const AboutMe = () => {
             ${themeMode === 'dark' && `${css.text} ${css.dark}`}
             ${themeMode === 'light' && `${css.text} ${css.light}`}
             `}>
-            Hace mas de 10 años comencé diseñando flyers con photoshop, pasando también por CorelDraw e Ilustrador, siempre me gusto el diseño grafico,sin embargo <span> descubrí el mundo de la tecnología </span> y mi corazón se encendió.
+            Hace mas de 10 años comencé diseñando flyers con photoshop, pasando también por CorelDraw e Illustrator, siempre me gustó el diseño grafico, sin embargo <span> descubrí el mundo de la tecnología </span> y mi corazón se encendió.
             <br/>
             <br/>
             Todos los conocimientos adquiridos en esos años me facilitaron la entrada al <span> diseño de interfaces </span> de usuarios,  diseñar herramientas que proporcionen un gran valor a nuestras vidas se ha vuelto una pasión.

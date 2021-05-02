@@ -121,7 +121,7 @@ const HomeView = ({
 									<span>Adobe XD</span>
 								</li>
 							</ul>
-							{lenguage === 'es' ? <p>El conocimiento y experiencia de ambas areas me dan la capacidad de crear diseños eficientes y agradables tanto para el usuario como para los desarrolladores.</p> : null}
+							{lenguage === 'es' ? <p>El conocimiento y experiencia de ambas áreas me dan la capacidad de crear diseños eficientes y agradables tanto para el usuario como para los desarrolladores.</p> : null}
 
 							{lenguage === 'en' ? <p>The knowledge and experience of both areas have given me the ability to create efficient and pleasant designs for both the user and the developers.</p> : null}
 						</div>
@@ -272,7 +272,7 @@ const HomeView = ({
 								${themeMode === 'dark' && `${css.dark}`}
 								${themeMode === 'light' && `${css.light}`}`}
 								>
-									{lenguage === 'es' && `Fui parte del desarrollo de algunas paginas y emails con diversas tecnologías para el sitio de Smile Airline! estuve con un gran equipo de trabajo, nos pudimos acoplar en poco tiempo y poder dar soluciones rápidas a las necesidades requeridas`}
+									{lenguage === 'es' && `Fuí parte del desarrollo de algunas páginas y emails con diversas tecnologías para el sítio de Smile Airline! estúve con un gran equipo de trabajo, nos pudimos acoplar en poco tiempo y poder dar soluciones rápidas a las necesidades requeridas`}
 									{lenguage === 'en' && `I was part of the development of some pages and emails with various technologies for the Smile Airline site! I was with a great work team, we were able to connect in a short time and be able to give quick solutions to the required needs`}
 
 								</p>

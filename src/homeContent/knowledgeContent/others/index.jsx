@@ -75,7 +75,7 @@ const KnowledgeOthers = () => {
                     ${themeMode === 'dark' && `${css.text} ${css.dark}`}
                     ${themeMode === 'light' && `${css.text} ${css.light}`}
                     `}>
-							Constantemente  escucho potcads y Leo Libros o articulos que me ayuden a crecer en conocimientos y cada dia ser mejor profesional.
+							Constantemente  escucho potcads y Leo Libros o articulos que me ayuden a crecer en conocimientos y cada día ser mejor profesional.
                     </p>
 					}
 					{lenguage === 'en'
