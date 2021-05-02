@@ -1,6 +1,10 @@
 @import "../../general";
 
 .container {
+  margin-top: 3rem;
+  @media (min-width: 768px) {
+    margin-top: 0;
+  }
     
   .light{
     color: $dark;

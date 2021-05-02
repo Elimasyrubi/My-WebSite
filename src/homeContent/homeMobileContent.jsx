@@ -17,7 +17,7 @@ const HomeContentMobile = () => {
         {lenguage === 'es' &&  <ExperiencesView list={ExperiencesES}/>}
         {lenguage === 'en' &&  <ExperiencesView list={ExperiencesEN}/>}
        
-        <Lenguage/>
+        <Lenguage />
         </>
     );
 }

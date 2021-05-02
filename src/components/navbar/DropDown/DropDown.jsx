@@ -17,12 +17,19 @@ const DropDownView = ({ closeDropDownFn, lenguage, changeLenguageFn, }) => {
                 <i className="fas fa-times"></i>
             </button>
 
-            <a className={`${css.btn} ${css.blueButton}`}>
+            <a href='https://www.linkedin.com/in/eliezermasyrubi/' className={`${css.btn} ${css.blueButton}`}>
                 {lenguage === 'es' && 'Creemos Algo Juntos!'}
                 {lenguage === 'en' && `Let's Work Together`}
             </a>
 
-            <a className={`${css.btn} ${css.bntWhite}`} href='#'>
+            <a className={`${css.btn} ${css.bntWhite}`} target='_blank' href={`
+
+            ${lenguage === 'es' ? `https://palabras.ga/wp-content/uploads/2021/05/Eliezer-Masyrubi-Frontend-Developer-y-disenador-UIUX.pdf` : ''}
+                        
+            ${lenguage === 'en' ? 'https://palabras.ga/wp-content/uploads/2021/05/EN-Eliezer-Masyrubi-Frontend-Developer-y-disenador-UIUX.pdf' : ''} 
+            
+            
+            `} rel="noreferrer" >
                 <i className="fas fa-file-download"></i>
                 {lenguage === 'es' && 'Descargar CV'}
                 {lenguage === 'en' && 'Download CV'}
@@ -30,7 +37,7 @@ const DropDownView = ({ closeDropDownFn, lenguage, changeLenguageFn, }) => {
 
             {lenguage === 'en' &&
                 <button
-                    onClick={()=> changeLenguageFn('es')}
+                    onClick={() => changeLenguageFn('es')}
                     className={`${css.lenguageButton} ${css.btn}`}
                     type='button'>
                     <img src={spainFlag} alt="england Flag" />
@@ -39,7 +46,7 @@ const DropDownView = ({ closeDropDownFn, lenguage, changeLenguageFn, }) => {
             }
             {lenguage === 'es' &&
                 <button
-                    onClick={()=> changeLenguageFn('en')}
+                    onClick={() => changeLenguageFn('en')}
                     className={`${css.lenguageButton} ${css.btn}`}
                     type='button'>
                     <img src={EnglandFlag} alt="england Flag" />

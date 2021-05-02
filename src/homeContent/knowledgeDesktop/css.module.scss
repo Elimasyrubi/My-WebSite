@@ -45,7 +45,10 @@
   ul {
     display: flex;
     li {
-      margin-right: 5rem;
+      margin-right: 2rem;
+      @media (min-width: 1024px) {
+        margin-right: 5rem;
+      }
     }
   }
 

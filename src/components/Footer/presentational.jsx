@@ -14,13 +14,13 @@ const FooterView = () => {
            <div className={css.left}>
                <p>Eliezer Mas y rubi</p>
                 <span> <i className="fas fa-map-marker-alt"></i> Buenos Aires</span>
-                <a href='#'> <i className="fas fa-envelope"></i> elimasyrubi@gmail.com</a>
-                <a href='#'> <i className="fab fa-github"></i> elimayrubi</a>
+                <a href='mailto:elimasyrubi@gmail.com'> <i className="fas fa-envelope"></i> elimasyrubi@gmail.com</a>
+                <a target='_blank' href='https://github.com/Elimasyrubi' rel="noreferrer"> <i className="fab fa-github"></i> elimayrubi</a>
            </div>
            
            <div className={css.right}>
                <p>Creemos algo juntos</p>
-               <a href="#"> <i className="fab fa-linkedin"></i>
+               <a href="https://www.linkedin.com/in/eliezermasyrubi/"> <i className="fab fa-linkedin"></i>
                {lenguage === 'es' ? 'Contactame por Linkedin' : null}
                 {lenguage === 'en' ? 'Contact by Linkedin' : null}
                </a>

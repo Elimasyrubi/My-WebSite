@@ -8,13 +8,14 @@ import { MainRecomendations, Recomendations } from '../../content/Recomendations
 import RecomendationsBox from '../../components/RecomendationBox/presentational';
 import Modal from '../../components/Modal/index';
 import DesignPortfolioBox from '../../components/portfolioDesignBox/presentational';
-import Designs from '../../content/Designs';
+import { DesignsEn, DesignsEs } from '../../content/Designs';
 import AbouMeDesktop from '../../components/AboutMeDesktop/container';
 //Images
 import ReactLogo from '../../assets/reactLogo.png';
 import JavaScriptLogo from '../../assets/javascriptLogo.png';
 import FigmaLogo from '../../assets/figmaLogo.png';
 import XdLogo from '../../assets/xdLogo.png';
+import EliezerLogo from '../../assets/images/eliezerThumb.png';
 //Style
 import css from './css.module.scss'
 
@@ -89,6 +90,7 @@ const HomeView = ({
 				<section className={css.flex}>
 					<div className={css.container}>
 						<div className={css.heroImage}>
+							<img src={EliezerLogo} alt=""/>
 						</div>
 						<div className={css.heroContentLeft}>
 							<h2 className={css.subTitle}>
@@ -185,20 +187,40 @@ const HomeView = ({
 						{lenguage === 'en' ? 'UI/UX Designs' : null}
 					</h2>
 					<ul className={css.designPortfolio}>
-						{Designs.map((item => (
-							<li key={item.id}>
-								<DesignPortfolioBox
-									openPortfolioModalFn={openPortfolioModalFn}
-									id={item.id}
-									imgUrl={item.imgUrl}
-									title={item.title}
-									descriptions={item.descriptions}
-								/>
-							</li>
-						)))}
+						{lenguage === 'es' ? (
+							<>
+								{DesignsEs.map((item => (
+									<li key={item.id}>
+										<DesignPortfolioBox
+											openPortfolioModalFn={openPortfolioModalFn}
+											id={item.id}
+											imgUrl={item.imgUrl}
+											title={item.title}
+											descriptions={item.descriptions}
+										/>
+									</li>
+								)))}
+							</>
+						) : null}
+						{lenguage === 'en' ? (
+							<>
+								{DesignsEn.map((item => (
+									<li key={item.id}>
+										<DesignPortfolioBox
+											openPortfolioModalFn={openPortfolioModalFn}
+											id={item.id}
+											imgUrl={item.imgUrl}
+											title={item.title}
+											descriptions={item.descriptions}
+										/>
+									</li>
+								)))}
+							</>
+						) : null}
+
 					</ul>
 					<div className={css.btnContainer}>
-						<a href='#'
+						<a href='https://www.linkedin.com/in/eliezermasyrubi/'
 							className={`
 					${css.btn} ${css.blueButton}
 				`}>
@@ -220,46 +242,46 @@ const HomeView = ({
 						<li>
 							<img src="https://palabras.ga/wp-content/uploads/2021/04/image-30-1.png" alt="The Glew WebSite" />
 							<div className={css.text}>
-								<h3
+								<h3> <a
 									className={`
 								${themeMode === 'dark' && `${css.dark}`}
 								${themeMode === 'light' && `${css.light}`}`}
-								>The Glew</h3>
-								<p
+									href="https://www.theglew.com/" target='blank'>The Glew</a> </h3>
+									<p
 									className={`
 								${themeMode === 'dark' && `${css.dark}`}
 								${themeMode === 'light' && `${css.light}`}`}
-								>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-								<p
-									className={`
-								${themeMode === 'dark' && `${css.dark}`}
-								${themeMode === 'light' && `${css.light}`}`}
-								>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+								>
+									{lenguage === 'es' && `Diseñe la interfaz para las aplicaciones web y mobile para la plataforma The Glew, realice prototipos interactivos de ambos diseños, Tambien forme parte del equipo de desarrollo web, en este usamos React Js para el desarrollo del mismo.`}
+									{lenguage === 'en' && `I designed the interface for the web and mobile applications for The Glew platform, I made interactive prototypes of both designs, I was also part of the web development team, in this we used React Js for its development.`}
+
+								</p>
+					
 							</div>
 						</li>
 						<li>
 							<img src="https://palabras.ga/wp-content/uploads/2021/04/image-31.png" alt="Smiles WebSite" />
 							<div className={css.text}>
 								<h3
-									className={`
+
+								><a className={`
 								${themeMode === 'dark' && `${css.dark}`}
-								${themeMode === 'light' && `${css.light}`}`}
-								>Smiles</h3>
+								${themeMode === 'light' && `${css.light}`}`} href="https://www.smiles.com.ar/" target='blank'>Smiles</a> </h3>
 								<p
 									className={`
 								${themeMode === 'dark' && `${css.dark}`}
 								${themeMode === 'light' && `${css.light}`}`}
-								>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-								<p
-									className={`
-								${themeMode === 'dark' && `${css.dark}`}
-								${themeMode === 'light' && `${css.light}`}`}
-								>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+								>
+									{lenguage === 'es' && `Fui parte del desarrollo de algunas paginas y emails con diversas tecnologías para el sitio de Smile Airline! estuve con un gran equipo de trabajo, nos pudimos acoplar en poco tiempo y poder dar soluciones rápidas a las necesidades requeridas`}
+									{lenguage === 'en' && `I was part of the development of some pages and emails with various technologies for the Smile Airline site! I was with a great work team, we were able to connect in a short time and be able to give quick solutions to the required needs`}
+
+								</p>
+
 							</div>
 						</li>
 					</ul>
 					<div className={css.btnContainer}>
-						<a href='#'
+						<a href='https://www.linkedin.com/in/eliezermasyrubi/'
 							className={`
 					${css.btn} ${css.blueButton}
 				`}>

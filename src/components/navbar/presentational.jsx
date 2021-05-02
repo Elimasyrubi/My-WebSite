@@ -24,19 +24,21 @@ const NavbarView = ({
 	const renderBlueButton = () => {
 		return (
 			<div className={css.desktopButtons}>
-				<a
-
-					className={
+				<a className={
 					`${fixed && themeMode === 'dark' ? `${css.btnFixed} ${css.btnCvDark}` : null}  
-					${fixed && themeMode === 'light' ? `${css.btnFixed} ${css.btnCvLight}` : null}  
-					${css.bntCv}
-					`
-					} href='#'>
+						${fixed && themeMode === 'light' ? `${css.btnFixed} ${css.btnCvLight}` : null}  
+						${css.bntCv}`
+				} target='_blank'
+					href={`
+					${lenguage === 'es' ? `https://palabras.ga/wp-content/uploads/2021/05/Eliezer-Masyrubi-Frontend-Developer-y-disenador-UIUX.pdf` : ''}
+            
+					${lenguage === 'en' ? 'https://palabras.ga/wp-content/uploads/2021/05/EN-Eliezer-Masyrubi-Frontend-Developer-y-disenador-UIUX.pdf': ''}
+					`}
+					rel="noreferrer">
 					<i className="fas fa-file-download"></i>
-					CV
-				</a>
-
-				<a href='#'
+				CV
+			</a>
+				<a href='https://www.linkedin.com/in/eliezermasyrubi/'
 					className={`
 					${fixed ? `${css.btnFixed}` : null}  
 					${css.btn} ${css.blueButton}
@@ -57,7 +59,7 @@ const NavbarView = ({
 
 			<div className={css.container}>
 				<nav
-					className={fixed ? `${css.navFixed}`: null}
+					className={fixed ? `${css.navFixed}` : null}
 				>
 					<p className={`
 					${fixed && themeMode === 'dark' ? `${css.nameDark} ` : null}  
