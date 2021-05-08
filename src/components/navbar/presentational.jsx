@@ -30,9 +30,9 @@ const NavbarView = ({
 						${css.bntCv}`
 				} target='_blank'
 					href={`
-					${lenguage === 'es' ? `https://palabras.ga/wp-content/uploads/2021/05/Eliezer-Masyrubi-Frontend-Developer-y-disenador-UIUX.pdf` : ''}
+					${lenguage === 'es' ? `https://eliezerblog.ga/wp-content/uploads/2021/05/Eliezer-Masyrubi-Frontend-Developer-y-disenador-UIUX.pdf` : ''}
             
-					${lenguage === 'en' ? 'https://palabras.ga/wp-content/uploads/2021/05/EN-Eliezer-Masyrubi-Frontend-Developer-y-disenador-UIUX.pdf': ''}
+					${lenguage === 'en' ? 'https://eliezerblog.ga/wp-content/uploads/2021/05/EN-Eliezer-Masyrubi-Frontend-Developer-y-disenador-UIUX.pdf': ''}
 					`}
 					rel="noreferrer">
 					<i className="fas fa-file-download"></i>

@@ -63,7 +63,7 @@ const KnowledgeDeveloper = () => {
             ${themeMode === 'dark' && `${css.text} ${css.dark}`}
             ${themeMode === 'light' && `${css.text} ${css.light}`}
             `}>
-                        Actualmente Estoy  cursando la escuela de Javascript de Platzi, al dominar estas tecnologías seguiré mi formaciÓn hasta completar el stack de React js
+                        Actualmente Estoy  cursando la escuela de Javascript de Platzi, al dominar estas tecnologías seguiré mi formación hasta completar el stack de React js
              </p>
                 }
                 {lenguage === 'en'
@@ -71,7 +71,7 @@ const KnowledgeDeveloper = () => {
             ${themeMode === 'dark' && `${css.text} ${css.dark}`}
             ${themeMode === 'light' && `${css.text} ${css.light}`}
             `}>
-                        I am currently studying the Platzi Javascript school, after mastering these technologies I will continue my training until I complete the React js stack
+                        I am currently, studying the Platzi Javascript school, after mastering these technologies I will continue my training until I complete the React js stack
              </p>
                 }
                </div>

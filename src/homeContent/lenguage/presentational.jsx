@@ -20,7 +20,7 @@ const LenguageView = () => {
                     ${themeMode === 'light' && `${css.subtitle} ${css.light}`}
                     `}
                     >
-                        {lenguage === 'es' ? 'Ingles Avanzado oral y escrito' : null}
+                        {lenguage === 'es' ? 'Inglés Avanzado oral y escrito' : null}
                         {lenguage === 'en' ? 'Fluent written and spoken English' : null}
                     </p>
                     <p
@@ -29,7 +29,7 @@ const LenguageView = () => {
                          ${themeMode === 'light' && `${css.text} ${css.light}`}
                          `}
                     >
-                         {lenguage === 'es' ? 'Tengo un ingles fluido a la hora de comunicarme, he tenido trato directo con clientes de habla inglesa, cada día practico para mejorar mas mi nivel de ingles.' : null}
+                         {lenguage === 'es' ? 'Tengo un inglés fluido a la hora de comunicarme, he tenido trato directo con clientes de habla inglesa, cada día practico para mejorar mas mi nivel de ingles.' : null}
                         {lenguage === 'en' ? 'I am fluent in English when communicating, I have had direct contact with English-speaking clients, every day I practice to further improve my level of English.' : null}
                     </p>
                 </div>

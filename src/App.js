@@ -15,7 +15,7 @@ function App() {
   useEffect(() => {
     if(themeMode === 'dark'){
       //darkMode
-      document.body.style.backgroundColor = "#1A1C2C";
+      document.body.style.backgroundColor = "#121A21";
     }
     if(themeMode === 'light'){
       //lightMode

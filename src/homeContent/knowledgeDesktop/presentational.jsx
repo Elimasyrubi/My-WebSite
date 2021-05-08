@@ -54,7 +54,7 @@ const KnowlogedDesktopView = ({ selectKnowledgeFn, selected }) => {
                         ${themeMode === 'light' && `${selected === 'softSkill' && `${css.btnActive}`} ${css.btn} ${css.btnLight}`}`}
 					>
 						{lenguage === 'es' ? 'Habilidades' : null}
-						{lenguage === 'en' ? 'softSkill' : null}
+						{lenguage === 'en' ? 'Soft Skills' : null}
 					</button>
 				</li>
 			</ul>

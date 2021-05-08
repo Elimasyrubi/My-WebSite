@@ -252,7 +252,7 @@ const HomeView = ({
 								${themeMode === 'dark' && `${css.dark}`}
 								${themeMode === 'light' && `${css.light}`}`}
 								>
-									{lenguage === 'es' && `Diseñe la interfaz para las aplicaciones web y mobile para la plataforma The Glew, realice prototipos interactivos de ambos diseños, Tambien forme parte del equipo de desarrollo web, en este usamos React Js para el desarrollo del mismo.`}
+									{lenguage === 'es' && `Diseñe la interfaz para las aplicaciones web y mobile para la plataforma The Glew, realice prototipos interactivos de ambos diseños, También forme parte del equipo de desarrollo web, en este usamos React Js para el desarrollo del mismo.`}
 									{lenguage === 'en' && `I designed the interface for the web and mobile applications for The Glew platform, I made interactive prototypes of both designs, I was also part of the web development team, in this we used React Js for its development.`}
 
 								</p>

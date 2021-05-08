@@ -54,7 +54,7 @@ const KnowledgeDesign = () => {
                     ${themeMode === 'dark' && `${css.text} ${css.dark}`}
                     ${themeMode === 'light' && `${css.text} ${css.light}`}
                     `}>
-						Actualmente Estoy  cursando la escuela de Diseño UI de Platzi, ampliando asi mis conocimientos en el Área.
+						Actualmente Estoy  cursando la escuela de Diseño UI de Platzi, ampliando así mis conocimientos en el área.
                     </p>
 				}
 				{lenguage === 'en'
@@ -62,7 +62,7 @@ const KnowledgeDesign = () => {
                     ${themeMode === 'dark' && `${css.text} ${css.dark}`}
                     ${themeMode === 'light' && `${css.text} ${css.light}`}
                     `}>
-						Currently I am studying the UI Design school at Platzi, thus expanding my knowledge in the Área.
+						Currently, I am studying the UI Design school at Platzi, thus expanding my knowledge in the area.
                     </p>
 				}
 			</div>

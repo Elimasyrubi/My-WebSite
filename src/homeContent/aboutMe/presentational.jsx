@@ -18,7 +18,7 @@ const AboutMe = () => {
             ${themeMode === 'dark' && `${css.text} ${css.dark}`}
             ${themeMode === 'light' && `${css.text} ${css.light}`}
             `}>
-            Hace mas de 10 años comencé diseñando flyers con photoshop, pasando también por CorelDraw e Illustrator, siempre me gustó el diseño grafico, sin embargo <span> descubrí el mundo de la tecnología </span> y mi corazón se encendió.
+            Hace más de 10 años comencé diseñando flyers con photoshop, pasando también por CorelDraw e Illustrator, siempre me gustó el diseño gráfico, sin embargo <span> descubrí el mundo de la tecnología </span> y mi corazón se encendió.
             <br/>
             <br/>
             Todos los conocimientos adquiridos en esos años me facilitaron la entrada al <span> diseño de interfaces </span> de usuarios,  diseñar herramientas que proporcionen un gran valor a nuestras vidas se ha vuelto una pasión.
@@ -27,7 +27,7 @@ const AboutMe = () => {
             La satisfacción  se completa al <span> desarrollar el producto </span>, es darle vida al diseño, creo que cada producto desarrollado es un grano de arena aportado en la construcción de nuestro futuro.
             <br/>
             <br/>
-            En mis tiempos libre toco el piano y la guitarra, también me gusta leer y ver películas de historia, <span> conocer nuestro pasado mientras ayudo a construir el futuro</span>.
+            En mi tiempo libre toco el piano y la guitarra, también me gusta leer y ver películas de historia, <span> conocer nuestro pasado mientras ayudo a construir el futuro</span>.
              </p> 
         }
          {lenguage === 'en'
@@ -44,7 +44,7 @@ const AboutMe = () => {
             Satisfaction is completed when <span> developing the product </span>, it is giving life to the design, I believe that each product developed is a grain of sand contributed in the construction of our future.
             <br/>
             <br/>
-            In my spare time I play the piano and the guitar, I also like to read and watch history movies, <span> get to know our past while helping to build the future </span>.
+            In my free time I play the piano and the guitar, I also like to read and watch history movies, <span> get to know our past while helping to build the future</span>.
 
              </p> 
         }

@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 //icons
 import IconEnglish from '../../../assets/icon/english.png';
 import IconSlack from '../../../assets/icon/slack.png';
+import Jira from '../../../assets/icon/jira.png';
 import IconTeam from '../../../assets/icon/team.png';
 import IconHands from '../../../assets/icon/hands.png';
 
@@ -13,14 +14,16 @@ const KnowledgeOthers = () => {
 
 
 	const listOhterIconEs = [
-		{ icon: IconEnglish, text: 'Ingles Avanzado Oral y escrito' },
-		{ icon: IconSlack, text: 'Slack / M-Team / Jira / Asana' },
+		{ icon: IconEnglish, text: 'Inglés Avanzado Oral y escrito' },
+		{ icon: IconSlack, text: 'Slack / M-Team' },
+		{ icon: Jira, text: ' Jira / Asana / Trello' },
 		{ icon: IconTeam, text: 'Liderazgo' },
 		{ icon: IconHands, text: 'Trabajo en equipo' },
 	];
 	const listOhterIconEn = [
 		{ icon: IconEnglish, text: 'Advanced Oral and Written English' },
-		{ icon: IconSlack, text: 'Slack / M-Team / Jira / Asana' },
+		{ icon: IconSlack, text: 'Slack / M-Team' },
+		{ icon: Jira, text: ' Jira / Asana / Trello' },
 		{ icon: IconTeam, text: 'Leadership' },
 		{ icon: IconHands, text: 'Teamwork' },
 	];
@@ -75,7 +78,7 @@ const KnowledgeOthers = () => {
                     ${themeMode === 'dark' && `${css.text} ${css.dark}`}
                     ${themeMode === 'light' && `${css.text} ${css.light}`}
                     `}>
-							Constantemente  escucho potcads y Leo Libros o articulos que me ayuden a crecer en conocimientos y cada día ser mejor profesional.
+							Constantemente  escucho podcast y leo libros o artículos que me ayuden a crecer personal y profesinalmente.
                     </p>
 					}
 					{lenguage === 'en'
@@ -83,7 +86,7 @@ const KnowledgeOthers = () => {
                     ${themeMode === 'dark' && `${css.text} ${css.dark}`}
                     ${themeMode === 'light' && `${css.text} ${css.light}`}
                     `}>
-							I constantly listen to potcads and I read books or articles that help me to grow in knowledge and every day to be a better professional.
+							I constantly listen to Podcast and read books or articles that help me grow in knowledge and be a better person and professional every day..
                     </p>
 					}
 				</div>
