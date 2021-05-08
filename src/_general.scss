@@ -34,6 +34,7 @@ $text: 1.2rem;
 @mixin textMobile {
     line-height: 2rem;
     font-size: 1.2rem;
+    font-weight: 300;
 }
 @mixin spanMobile {
     span {
