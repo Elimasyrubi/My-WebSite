@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 import {useDispatch, useSelector} from 'react-redux';
 import { useState } from 'react';
-import {changeThemeMode, changeLenguage} from '../../redux/App/AppActions'
+import {changeThemeMode, changeLenguage} from '../../redux/App/AppActions';
 import NavbarView from './presentational';
 
 const Navbar = ({fixed}) => {
